@@ -24,3 +24,6 @@ out/
 
 # MacOS dependecies
 .DS_Store
+
+# CMake build folder
+build/
