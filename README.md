@@ -25,7 +25,14 @@ Simple echo bot which sends everything it receives:
 #include <tgbot/tgbot.h>
 
 int main() {
-    TgBot::Bot bot("PLACE YOUR TOKEN HERE");
+    TgBot::CurlHttpClient curlHttpClient;
+
+    TgBot::Bot bot(
+        "PLACE YOUR TOKEN HERE",
+        "https://api.telegram.org",
+        curlHttpClient
+    );
+
     bot.getEvents().onCommand("start", [&bot](TgBot::Message::Ptr message) {
         bot.getApi().sendMessage(message->chat->id, "Hi!");
     });
