@@ -57,6 +57,8 @@ int main() {
 }
 ```
 
+Do not forget to add -DHAVE_CURL and install libcurl
+
 All other samples are located [here](samples).
 
 
