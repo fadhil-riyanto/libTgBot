@@ -1,4 +1,4 @@
-#ifdef HAVE_CURL
+
 
 #include "tgbot/net/CurlHttpClient.h"
 
@@ -84,5 +84,3 @@ std::string CurlHttpClient::makeRequest(const Url& url, const std::vector<HttpRe
 }
 
 }
-
-#endif
