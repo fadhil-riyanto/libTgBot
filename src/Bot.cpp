@@ -1,4 +1,5 @@
 #include "tgbot/net/BoostHttpOnlySslClient.h"
+#include "tgbot/net/CurlHttpClient.h"
 #include "tgbot/Bot.h"
 
 #include "tgbot/EventBroadcaster.h"
@@ -16,7 +17,7 @@ Bot::Bot(std::string token, const std::string& url, const HttpClient& httpClient
 }
 
 HttpClient& Bot::_getDefaultHttpClient() {
-    static BoostHttpOnlySslClient instance;
+    static CurlHttpClient instance;
     return instance;
 }
 
